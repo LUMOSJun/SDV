@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Visualization</title>
+    <!-- CSS for Visualization-->
+    <link rel="stylesheet" href="js/index.css">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <!-- D3 js library for visualizations-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Library for topojson map processing-->
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+
+
+</head>
+
+<body>
+    <h1>
+        <center>Covid-19 Virus</center>
+    </h1>
+<center>
+        <div class="container border p-3 m-3 bg-white rounded">
+            <div class="row">
+                <!-- preview element -->
+                <div class="preview"></div>
+                <p class="preview-text">Month</p>
+                <!-- Element that will contain dropdown-menu-->
+                <div id="dropdown-menu"></div>
+            </div>
+
+            <!-- colorpicker element -->
+            <div class="colorpicker" style="display:none">
+                <canvas id="picker" var="1" width="300" height="300"></canvas>
+                <div class="controls">
+                    <div><label>R</label> <input type="text" id="rVal" /></div>
+                    <div><label>G</label> <input type="text" id="gVal" /></div>
+                    <div><label>B</label> <input type="text" id="bVal" /></div>
+                    <div><label>RGB</label> <input type="text" id="rgbVal" /></div>
+                    <div><label>HEX</label> <input type="text" id="hexVal" /></div>
+
+
+                    <!-- TEST FOR LEGEND -->
+
+                </div>
+            </div>
+            <div id="legend"></div>
+            <!-- Element that will contain the window and the map -->
+            <div id="container"></div>
+            <!-- Element that will contain hover over tool tip-->
+            <div id="tooltip-container"></div>
+            <script src="js/index.js"></script>
+
+        </div>
+
+
+        <div class="container border p-3 m-3 bg-white rounded">
+        
+            <button type="submit" id="btn_submit1" onclick="btnAction1()"> Total </button>
+            <button type="submit" id="btn_submit2" onclick="btnAction2()"> Alpha </button>
+            <button type="submit" id="btn_submit3" onclick="btnAction3()"> Delta </button>
+            <button type="submit" id="btn_submit4" onclick="btnAction4()"> Omicron </button>
+            <style>
+                .bar {
+                    fill: rgba(0, 128, 0, 0.289);
+                    margin: 0 auto;
+                }
+            </style>
+            <div id="bar" style="width:950px ;height: 350px;">
+                <script src="js/index1.js"></script>
+            </div>
+        </div>
+
+</center>
+
+
+
+
+
+</body>
+
+
+</html>
